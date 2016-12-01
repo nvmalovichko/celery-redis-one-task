@@ -2,7 +2,9 @@
 This module provides utils for creating one instance tasks with celery (using Redis).
 
 ## Examples
-- Simple one instance task:
+- Simple one instance task.
+
+  (`60*15` - redis cached lock id maximum lifetime in seconds. When task is ended lock will be deleted automatically.)
 ```
 @shared_task(name='Task name')
 @singleton_task(60 * 15)
@@ -10,7 +12,9 @@ def mytask():
     print('task do things')
 ```
 
-- Parameterized one instance task. Main part: `kwargs={'add_spices': number)`:
+- Parameterized one instance task. Look at `kwargs={'add_spices': number)`.
+
+  (`60*15` - redis cached lock id maximum lifetime in seconds. When task is ended lock will be deleted automatically.)
 ```
 @shared_task(name='Task name')
 @singleton_task(60 * 15)
