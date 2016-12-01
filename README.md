@@ -28,5 +28,5 @@ def decorated_function_main():
 @shared_task(name='Task name')
 @spiced_singleton_task(60 * 15)
 def mytask():
-    print('task do things')
+    print('task is doing things')
 ```
