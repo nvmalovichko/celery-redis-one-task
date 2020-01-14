@@ -1,4 +1,4 @@
-# CROIT: celery redis one instance task
+# celery-redis-one-task: celery redis one instance task
 This module provides utils for creating one instance tasks with celery (using Redis).
 
 ## Examples
