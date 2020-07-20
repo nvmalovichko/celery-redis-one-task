@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='spiced-singleton-tasks',
+    name='celery-redis-singlton-task',
     version="1.0.0",
     description='Add a celery single task support',
     url='none',
